@@ -1,16 +1,25 @@
-export default function Page() {
+import Head from "next/head"
+export default function SingUpPage() {
     return (
         <>
+        <Head>
         <title>Sign Up</title>
-        <br/><br/><br/>
-        <div className="container" style={{ backgroundColor: '#6f2c91', minHeight: '65vh', padding: '80px', minWidth: '100vw' }}>
-        <br/><br/><br/>
-        <div className="card" class="text-bg-dark p-3">
-        <center>
-        <div className="card-header" class="text-bg-dark p-3">
-                Sign Up
-            </div>
-            </center>
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+        </Head>
+    <div className="d-flex align-items-center justify-content-center"
+        style={{
+          backgroundColor: '#6f2c91',
+          minHeight: '130vh',
+          padding: '20px',
+        }}
+      >
+        <div className="card text-bg-dark p-4" style={{ maxWidth: '400px', width: '100%' ,minWidth: '80vw' }}>
+          <div className="card-header text-center">
+            <h3>Sign In</h3>
+          </div>
                 <div class="card-body">
                     <form className="row g-3">
                         <div className="col-md-6">
@@ -58,7 +67,7 @@ export default function Page() {
                     </form>
                 </div>
         </div>
-        </div>
+    </div>
         </>
     )
 }

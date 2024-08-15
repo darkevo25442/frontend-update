@@ -32,10 +32,10 @@ export default function Navbar() {
                 </li>
             </ul>
             <div className="d-flex">
-              <Link href="/signup" className="btn btn-outline-primary mx-2 fs-5">
+              <Link href="/signup" className="btn btn-outline-light mx-2 fs-5 text-dark">
                 SignUp
               </Link>
-              <Link href="/signin"className="btn btn-outline-success mx-2 fs-5">
+              <Link href="/signin"className="btn btn-dark mx-2 fs-5">
                 SignIn
               </Link>
             </div>
