@@ -1,24 +1,35 @@
+'use client';
+
 import Head from 'next/head';
+import { useEffect, useState } from 'react';
+import styles from './SignInPage.module.css';
 
 export default function SignInPage() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-      <Head>
         <title>Sign In</title>
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
           rel="stylesheet"
         />
-      </Head>
       <div
-        className="d-flex align-items-center justify-content-center"
-        style={{
-          backgroundColor: '#6f2c91',
-          minHeight: '100vh',
-          padding: '20px',
-        }}
+        className={`d-flex align-items-center justify-content-center ${styles.pageBackground}`}
       >
-        <div className="card text-bg-dark p-4" style={{ maxWidth: '400px', width: '100%' }}>
+        <div
+          className={`card text-bg-dark p-4 ${styles.cardContainer} ${
+            isVisible ? styles.slideIn : ''
+          }`}
+        >
           <div className="card-header text-center">
             <h3>Sign In</h3>
           </div>
@@ -47,14 +58,13 @@ export default function SignInPage() {
                 />
               </div>
               <div className="d-grid">
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className={`btn btn-primary ${styles.btn}`}>
                   Sign In
                 </button>
               </div>
             </form>
           </div>
         </div>
-        
       </div>
     </>
   );
