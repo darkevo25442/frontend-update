@@ -1,8 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Head from 'next/head';
-import styles from './SignUpPage.module.css'; // Import CSS Module
+import styles from './SignUpPage.module.css';
 
 export default function SignUpPage() {
   const [isVisible, setIsVisible] = useState(false);

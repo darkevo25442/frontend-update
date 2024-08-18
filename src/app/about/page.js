@@ -1,6 +1,5 @@
 'use client';
 
-import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import styles from './AboutPage.module.css';
 
@@ -17,16 +16,14 @@ export default function About() {
 
   return (
     <>
-    
-      <Head>
-        <title>เกี่ยวกับอิเลน่า</title>
+    <br/><br/><br/>
+        <title>อิเลน่า</title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
           rel="stylesheet"
         />
-      </Head>
       <div className={`container-fluid ${styles.pageBackground}`}>
         <div className={`card mt-4 ${styles.cardContainer} ${isVisible ? styles.slideIn : ''}`}>
           <div className="card-body text-center">

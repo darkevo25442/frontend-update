@@ -1,4 +1,4 @@
-import Image from "next/image"
+
 export default function footer() {
     return (
       <footer className="bg-dark text-white py-4">
